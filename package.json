@@ -1,0 +1,38 @@
+{
+  "name": "reshape-express",
+  "description": "Express plugin for reshape",
+  "version": "0.0.0",
+  "author": "reshape",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/reshape/reshape-express/issues",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "coveralls": "^2.11.14",
+    "express": "^4.14.0",
+    "nyc": "^8.3.2",
+    "reshape-standard": "^0.4.0",
+    "snazzy": "^5.0.0",
+    "standard": "^8.4.0",
+    "supertest-as-promised": "^4.0.2"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "homepage": "https://github.com/reshape/reshape-express",
+  "license": "MIT",
+  "main": "lib",
+  "repository": "reshape/reshape-express",
+  "scripts": {
+    "coverage": "nyc ava && nyc report --reporter=html && open ./coverage/index.html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard | snazzy",
+    "test": "nyc ava"
+  },
+  "dependencies": {
+    "reshape": "^0.3.2",
+    "supertest": "^2.0.1",
+    "when": "^3.7.7"
+  }
+}
