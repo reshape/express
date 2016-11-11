@@ -1,9 +1,9 @@
 # Reshape Express
 
 [![npm](https://img.shields.io/npm/v/reshape-express.svg?style=flat-square)](https://npmjs.com/package/reshape-express)
-[![tests](https://img.shields.io/travis/reshape/reshape-express.svg?style=flat-square)](https://travis-ci.org/reshape/reshape-express?branch=master)
-[![dependencies](https://img.shields.io/david/reshape/reshape-express.svg?style=flat-square)](https://david-dm.org/reshape/reshape-express)
-[![coverage](https://img.shields.io/coveralls/reshape/reshape-express.svg?style=flat-square)](https://coveralls.io/r/reshape/reshape-express?branch=master)
+[![tests](https://img.shields.io/travis/reshape/express.svg?style=flat-square)](https://travis-ci.org/reshape/express?branch=master)
+[![dependencies](https://img.shields.io/david/reshape/express.svg?style=flat-square)](https://david-dm.org/reshape/express)
+[![coverage](https://img.shields.io/coveralls/reshape/express.svg?style=flat-square)](https://coveralls.io/r/reshape/express?branch=master)
 
 An express view engine for reshape
 
