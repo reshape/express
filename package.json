@@ -7,6 +7,10 @@
     "verbose": "true"
   },
   "bugs": "https://github.com/reshape/reshape-express/issues",
+  "dependencies": {
+    "reshape": "^0.3.2",
+    "when": "^3.7.7"
+  },
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.14",
@@ -30,9 +34,5 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard | snazzy",
     "test": "nyc ava"
-  },
-  "dependencies": {
-    "reshape": "^0.3.2",
-    "when": "^3.7.7"
   }
 }
