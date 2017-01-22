@@ -1,5 +1,7 @@
 # Reshape Express
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reshape/express.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/reshape-express.svg?style=flat-square)](https://npmjs.com/package/reshape-express)
 [![tests](https://img.shields.io/travis/reshape/express.svg?style=flat-square)](https://travis-ci.org/reshape/express?branch=master)
 [![dependencies](https://img.shields.io/david/reshape/express.svg?style=flat-square)](https://david-dm.org/reshape/express)
