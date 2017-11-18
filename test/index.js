@@ -1,14 +1,17 @@
 const reshapeExpress = require('..')
 const standard = require('reshape-standard')
+const sugarml = require('sugarml')
 const exp = require('reshape-expressions')
+const path = require('path')
+const fixtures = path.join(__dirname, 'fixtures')
 const express = require('express')
-const supertest = require('supertest-as-promised')
+const supertest = require('supertest')
 const test = require('ava')
 
 test('defaults', (t) => {
   const app = express()
   reshapeExpress(app, { plugins: exp() })
-  app.set('views', './fixtures')
+  app.set('views', fixtures)
   app.set('view engine', 'html')
   app.get('/', (req, res) => res.render('index.html', { foo: 'bar' }))
 
@@ -20,7 +23,7 @@ test('defaults', (t) => {
 test('no opts', (t) => {
   const app = express()
   reshapeExpress(app)
-  app.set('views', './fixtures')
+  app.set('views', fixtures)
   app.set('view engine', 'html')
   app.get('/', (req, res) => res.render('index.html'))
 
@@ -31,8 +34,8 @@ test('no opts', (t) => {
 
 test('with reshape-standard', (t) => {
   const app = express()
-  reshapeExpress(app, standard(), 'sgr')
-  app.set('views', './fixtures')
+  reshapeExpress(app, standard({ parser: sugarml, template: true }), 'sgr')
+  app.set('views', fixtures)
   app.set('view engine', 'sgr')
   app.get('/', (req, res) => res.render('index.sgr', { foo: 'bar' }))
 
@@ -44,7 +47,7 @@ test('with reshape-standard', (t) => {
 test('error', (t) => {
   const app = express()
   reshapeExpress(app, standard(), 'sgr')
-  app.set('views', './fixtures')
+  app.set('views', fixtures)
   app.set('view engine', 'sgr')
   app.get('/', (req, res) => res.render('error.sgr', { foo: 'bar' }))
 
