@@ -27,23 +27,23 @@ const reshape = require('reshape-express')
 const standard = require('reshape-standard')
 
 const app = express()
-reshape(app, standard({ template: true }), 'sgr')
+reshape(app, standard({ template: true }), 'html')
 
 app.set('views', './views')
-app.set('view engine', 'sgr')
+app.set('view engine', 'html')
 
 app.get('/', (req, res) => {
-  res.render('index.sgr', { foo: 'bar' })
+  res.render('index.html', { foo: 'bar' })
 })
 
 app.listen(3000)
 ```
 
-And in `views/index.sgr`:
+And in `views/index.html`:
 
 ```jade
-h1 Test Page!
-p {{ foo }}
+<h1>Test Page!</h1>
+<p>{{ foo }}</p>
 ```
 
 Should come out rendered correctly with locals and all. Whoo! 🎉
