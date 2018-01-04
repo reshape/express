@@ -27,7 +27,7 @@ const reshape = require('reshape-express')
 const standard = require('reshape-standard')
 
 const app = express()
-reshape(app, standard(), 'sgr')
+reshape(app, standard({ template: true }), 'sgr')
 
 app.set('views', './views')
 app.set('view engine', 'sgr')
